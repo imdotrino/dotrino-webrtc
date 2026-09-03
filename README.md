@@ -58,6 +58,23 @@ contenedor MP4. Once megas de código que nunca se ejecutaban.
 Y **nada más**. `lib/index.mjs` —el paquete que ejecuta el camino de datos, 567 KB— está
 byte a byte como arriba, igual que `ice`, `dtls`, `sctp` y `webrtc`.
 
+## Lo que la poda cierra de la cadena de suministro
+
+Es la razón por la que el dueño la prefiere, y conviene ser exacto sobre hasta dónde llega.
+
+**Lo que queda cerrado del todo:** `lib/` vive en ESTE repo. Los 567 KB que hacen el
+trabajo —ICE, DTLS, SCTP— ya no se resuelven desde npm en cada instalación, así que no
+pueden cambiar debajo de nadie. Es la parte grande.
+
+**Lo que se reduce a la mitad:** 42 mantenedores pasan a 21. Cada uno era una cuenta de npm
+que, comprometida, entraba en la bóveda.
+
+**Lo que NO cubre, y hay que decirlo:** las 7 dependencias directas se siguen resolviendo
+desde npm. Contra eso van las dos cosas de siempre, y aquí importan el doble porque este
+código corre junto a la maestra: `ignore-scripts=true` (el vector #1 de inyección son los
+scripts de instalación) y **versiones exactas** en el manifiesto y en el `package-lock.json`
+commiteado. Sin eso, una dependencia comprometida entra sola en la siguiente instalación.
+
 ## Lo que sigue siendo cierto, y conviene no olvidar
 
 Esto sigue siendo **DTLS, ICE y SCTP en JavaScript, de un solo mantenedor y en 0.x**,
