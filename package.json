@@ -1,0 +1,42 @@
+{
+  "name": "@dotrino/webrtc",
+  "version": "0.1.0",
+  "description": "WebRTC en JavaScript puro para Dotrino: SOLO canales de datos. Poda de werift, sin cambios de logica.",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./lib/webrtc/src/index.d.ts",
+      "require": "./lib/webrtc/src/index.js",
+      "import": "./lib/index.mjs"
+    }
+  },
+  "dependencies": {
+    "@fidm/x509": "^1.2.1",
+    "@noble/curves": "^1.8.1",
+    "@peculiar/x509": "^1.12.3",
+    "@shinyoshiaki/binary-data": "^0.6.1",
+    "debug": "4.4.0",
+    "multicast-dns": "^7.2.5",
+    "tweetnacl": "^1.0.3"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imdotrino/dotrino-webrtc.git"
+  },
+  "upstream": {
+    "package": "werift",
+    "version": "0.24.4",
+    "repo": "https://github.com/shinyoshiaki/werift-webrtc"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ]
+}
