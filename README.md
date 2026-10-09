@@ -102,3 +102,7 @@ rm -rf lib/rtp lib/nonstandard          # la poda, otra vez
 
 Después, **la prueba**: `npm test`. Si el canal de datos no negocia, la poda de esa versión
 necesita otra cosa y hay que mirarla — no se publica.
+
+## Documentación de uso
+
+Está en el wiki: <https://wiki.dotrino.com/desarrollo/pilares/>
