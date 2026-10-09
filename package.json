@@ -1,6 +1,6 @@
 {
   "name": "@dotrino/webrtc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "WebRTC en JavaScript puro para Dotrino: SOLO canales de datos. Poda de werift, sin cambios de logica.",
   "license": "MIT",
   "exports": {
